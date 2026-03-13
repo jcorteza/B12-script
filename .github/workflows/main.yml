@@ -1,0 +1,10 @@
+on: workflow_dispatch
+
+jobs:
+  run_apply:
+    name: apply to B12 job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: pip install requests
+      - run: python3 apply.py
